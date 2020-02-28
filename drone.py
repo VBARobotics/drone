@@ -19,17 +19,17 @@ if (success):
     for shots in range(3):
        print("Fire: " + str(shots))
        mambo.fire_gun()
-       mambo.smart_sleep(1)
+       mambo.smart_sleep(2)
 
     mambo.smart_sleep(2)
     print("Flying direct: yaw")
     mambo.fly_direct(roll=0, pitch=50, yaw=0, vertical_movement=0, duration=1)
 
     print("Flying direct: going around in a circle (yes you can mix roll, pitch, yaw in one command!)")
-    mambo.fly_direct(roll=25, pitch=0, yaw=50, vertical_movement=0, duration=3)
+    mambo.fly_direct(roll=25, pitch=0, yaw=50, vertical_movement=-15, duration=5)
 
     print("Flying direct: going backwards (negative pitch)")
-    mambo.fly_direct(roll=0, pitch=-50, yaw=0, vertical_movement=0, duration=0.5)
+#    mambo.fly_direct(roll=0, pitch=-50, yaw=0, vertical_movement=0, duration=0.5)
 
     mambo.smart_sleep(2)
     print("landing")
